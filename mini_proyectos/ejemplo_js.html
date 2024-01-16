@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejemplo</title>
+</head>
+<script>
+  var nombre = "Juan";
+  var apellido = "Pelaez";
+  console.log(nombre + " " + apellido);
+  console.log(1 + 3);
+
+  var aColores = ["Rojo", "Verde", "Azul"];
+
+  function imprimir(aValores) {
+    console.log(aValores[0]);
+    console.log(aValores[1]);
+    console.log(aValores[2]);
+  }
+
+  imprimir(aColores);
+
+  function entreDiez(num) {
+    if (num >= 0 && num <= 10) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  console.log(entreDiez(50));
+
+  function sumatoria(numeros) {
+    var resultado = 0;
+    for (var i = 0; i < numeros.length; i++) {
+      resultado += numeros[i];
+    }
+    return resultado;
+  }
+  console.log(sumatoria([2, 3, 4]));
+
+  function sumatoriaReduce(aNumeros) {
+    let resultado = aNumeros.reduce(function (total, item) { return total + item });
+    return resultado;
+  }
+
+  aNumeros = new Array(10, 14, 21, 42, 7, 35, 42, 100);
+  console.log(sumatoriaReduce(aNumeros));
+
+  function imprimirListado(valores) {
+    valores.forEach(function (valor) {
+      document.write(valor);
+    });
+  }
+
+  imprimirListado(["hola", "mundo"]) + '<br>';
+
+
+  function filtrer(valores) {
+    var multiplosDeSiete = valores.filter(function (valor) {
+      return valor % 7 === 0;
+    });
+    imprimirListado(multiplosDeSiete);
+  }
+
+  filtrer(aNumeros);
+
+  function calcularRaizCuadrada(valores) {
+    var raicesCuadradas = valores.map(function(valor) {
+        return Math.sqrt(valor);
+    });
+    imprimirListado(raicesCuadradas);
+}
+
+calcularRaizCuadrada(aNumeros);
+
+
+</script>
+
+<body></body>
+
+</html>

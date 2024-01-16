@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objeto persona</title>
+  </head>
+
+  <body>
+    <script>
+      let persona = {
+        edad: 0,
+        nombre: "Juan",
+        apellido: "Pelaez",
+        sexo: "Masculino",
+        estadoCivil: "Soltero",
+        aPeliculasFavoritas: [
+          "Ratatouille",
+          "El código Da Vinci",
+          "Rapidos y furiosos reto Tokyo",
+        ],
+
+        cumplirAnios: function cumplirAnios() {
+          persona.edad++;
+        },
+
+        comer: function comer(comida) {
+          console.log(persona.nombre + "esta comiendo " + comida);
+        },
+      };
+    </script>
+  </body>
+</html>
